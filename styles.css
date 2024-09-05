@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 500px;
+    align-content: center;
+    justify-content: center;
+}
+
+
+#container div {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+#btn {
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 8px solid #42bdec;
+    width: 300px;
+    height: 150px;
+    font-size: 35px;
+    font-weight: 600px;
+    color: white;
+    background-color: blueviolet;
+}

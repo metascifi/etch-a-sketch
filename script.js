@@ -1,13 +1,12 @@
 let container = document.querySelector("#container");
 let btn = document.querySelector("#btn");
-let divOpacity = "1";
-
 
 function randomNum () {
    return Math.floor(Math.random() * 255);
 }
 
 btn.addEventListener('click', () => {
+    container.innerHTML = ""; 
     gridNum = prompt("How many squares you want to draw on?", 9);
     for (let i = 1; i < gridNum; i++) {
         container.appendChild(document.createElement('div'));

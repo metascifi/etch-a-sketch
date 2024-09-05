@@ -1,6 +1,11 @@
 let container = document.querySelector("#container");
 let btn = document.querySelector("#btn");
-let gridNum = 0;
+let divOpacity = "1";
+
+
+function randomNum () {
+   return Math.floor(Math.random() * 255);
+}
 
 btn.addEventListener('click', () => {
     gridNum = prompt("How many squares you want to draw on?", 9);
@@ -11,10 +16,15 @@ btn.addEventListener('click', () => {
 
 
 container.addEventListener('mouseover', (event) => {
-    if (event.target.id !== "container"){
-        target = event.target;
-        target.style.backgroundColor = "blue";
+    target = event.target;
+    if (event.target.id !== "container"){  
+        if (target.style.opacity === '') {
+            target.style.opacity = "0";
+        };  
+        target.style.backgroundColor = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
+        target.style.opacity = Number(target.style.opacity) + 0.1;
+        console.log(target.style.opacity);  
     };
-
 })
 
+// CHANGE PROPERTY OF DIV AND SAVE IT SO YOU CAN CHANGE FROM CHANGED VALUE BEFORE 

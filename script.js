@@ -21,9 +21,10 @@ container.addEventListener('mouseover', (event) => {
         if (target.style.opacity === '') {
             target.style.opacity = "0";
         };  
-        target.style.backgroundColor = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
+        if (target.style.backgroundColor === ''){
+            target.style.backgroundColor = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
+        };
         target.style.opacity = Number(target.style.opacity) + 0.1;
-        console.log(target.style.opacity);  
     };
 })
 
